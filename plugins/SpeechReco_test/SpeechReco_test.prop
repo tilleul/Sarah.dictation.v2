@@ -1,0 +1,8 @@
+{
+	"modules" : { 
+		"SpeechReco_test"  : {
+			"description": "test basique de SpeechReco Garbage",
+			"version": "0.1"
+		}
+	}
+}

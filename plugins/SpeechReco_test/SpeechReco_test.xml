@@ -1,0 +1,13 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleSpeechReco_test" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+<rule id="ruleSpeechReco_test" scope="public">
+
+	<tag>out.action=new Object();</tag>
+
+	<item>Sarah recherche</item>
+	<ruleref special="GARBAGE" />
+	<item>sur Wikipedia</item>
+
+	<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/SpeechReco_test";</tag>
+
+</rule>
+</grammar>

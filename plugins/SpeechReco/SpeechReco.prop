@@ -1,0 +1,8 @@
+{
+	"modules" : { 
+		"SpeechReco"  : {
+			"description": "Essai de reconnaissance GARBAGE par le Speech Reco de Chrome",
+			"version": "0.1"
+		}
+	}
+}
