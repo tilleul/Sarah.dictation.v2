@@ -27,5 +27,5 @@ Principe de fonctionnement
   - incrémenter un compteur de phrases reconnues
   - stocker dans une variable Globale à tous les plugins la phrase reconnue
 - normalement le plugin SpeechReco_test se déclenche bien avant que Google ait fini la reconnaissance vocale car Sarah est (locale et) plus rapide.
-- le plugin SpeechReco_test a une grammaire XML avec un GARBAGE mais SANS appel à Google API (dictation n'est même pas initialisé)
+- le plugin SpeechReco_test a une grammaire XML avec un GARBAGE mais SANS appel à Google API (dictation n'est pas utilisé et n'est même pas initialisé !)
 - le plugin SpeechReco_test attend (jusqu'à 5 secondes) que Google Chrome ait activé le plugin SpeechReco et utilise ensuite la même technique classique que celle utilisée par JPEncausse dans la doc du wiki de Sarah
