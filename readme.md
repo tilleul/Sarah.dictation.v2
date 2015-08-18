@@ -29,12 +29,18 @@ Principe de fonctionnement
   - stocker dans une variable Globale à tous les plugins la phrase reconnue
 - normalement le plugin SpeechReco_test se déclenche bien avant que Google ait fini la reconnaissance vocale car Sarah est (locale et) plus rapide.
 - le plugin SpeechReco_test a une grammaire XML avec un GARBAGE mais SANS appel à Google API (dictation n'est pas utilisé et n'est même pas initialisé !)
-- le plugin SpeechReco_test attend (jusqu'à 5 secondes) que Google Chrome ait activé le plugin SpeechReco et utilise ensuite la même technique classique que celle utilisée par JPEncausse dans la doc du wiki de Sarah
+- le plugin SpeechReco_test attend (jusqu'à 5 secondes) que Google Chrome ait activé le plugin SpeechReco (pour cela il attend simplement que la valeur du compteur de phrases reconnues augmente) et utilise ensuite la même technique classique que celle utilisée par JPEncausse dans la doc du wiki de Sarah pour traiter les Garbage/dictation renvoyé (traditionnellement) par Google API
 
 Avantages
 ---------
 - PLUS DE LIMITATION A 50 UTILISATIONS !!
-- vous pouvez utiliser le même principe (sans nécessairement Garbage) pour récupérer ce Chrome a compris A TOUT INSTANT ! 
+- Plus besoin de créer une clé Google API (dont le principe d'inscription change tout le temps)
+- vous pouvez utiliser le même principe (sans nécessairement Garbage) pour récupérer ce que Chrome a compris A TOUT INSTANT ! Par ex:
+  - votre grammaire contient "Sarah allume la lumière du salon" et "Sarah allume la lumière de la cuisine"
+  - anciennement il fallait passer en argument (action/data) le mot "salon" ou "cuisine" si on voulait que Sarah réponde "j'ai allumé la lumière de la cuisine/salon"
+  - vous pouvez à présent utiliser la dernière phrase reconnue par Google pour savoir quelle lumière vous avez demandé en dernier !
+- Pour certains mots, Chrome est beaucoup plus précis au niveau de la reconnaissance. C'est notamment le cas pour tous les mots en anglais mais aussi pour les nombres.
+  
 
 Inconvénients
 -------------
