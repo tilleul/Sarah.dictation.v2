@@ -17,7 +17,7 @@ exports.action = function(data, callback, config_local, SARAH_local){
 
 	// valeur initiale du compteur ...
 	cpt_initial = SARAH.context.SpeechReco.compteur;
-	
+	cnt=0;
 	token = setInterval(function() {checkSpeechReco(SARAH, callback)}, interval);
 	
 
